@@ -1,0 +1,26 @@
+<div>
+    <h2>Customer Login</h2>
+    <form (ngSubmit)="login('customer')">
+      <label for="username">Username:</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required />
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required />
+  
+      <button type="submit" class="bg-blue-500 text-white p-2 mt-2">Login</button>
+    </form>
+  </div>
+  
+  <div class="mt-6">
+    <h2>Admin Login</h2>
+    <form (ngSubmit)="login('admin')">
+      <label for="adminUsername">Username:</label>
+      <input type="text" id="adminUsername" [(ngModel)]="username" name="adminUsername" required />
+  
+      <label for="adminPassword">Password:</label>
+      <input type="password" id="adminPassword" [(ngModel)]="password" name="adminPassword" required />
+  
+      <button type="submit" class="bg-red-500 text-white p-2 mt-2">Login</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "description": "Description 1",
+      "price": 100,
+      "image": "image1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "Description 2",
+      "price": 150,
+      "image": "image2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "Description 3",
+      "price": 200,
+      "image": "image3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Idly Dosa Chutney Powder",
+      "description": "Spicy Chutney Powder - Traditional Gunpowder flavours No Added Colours, Flavours or Preservatives Ready to Eat with Dosa, Idli, Rice Garlic and Onion Free",
+      "price": 300 ,
+      "image": "https://m.media-amazon.com/images/I/71IkrQmMFWL._SL1300_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "idly karam",
+      "description": "Spicy Karam Podulu Made of premium spices and ingredients Fresh and homemade karalu",
+      "price": 300,
+      "image": "https://m.media-amazon.com/images/I/71LV+ip0OCL._SL1500_.jpg"
+    }
+  ],
+  "orders": [],
+  "users": [
+    {
+      "id": 1,
+      "username": "sai",
+      "email": "pavan",
+      "password": "1234",
+      "role": "customer"
+    },
+    {
+      "id": 2,
+      "username": "vasu",
+      "email": "pavan",
+      "password": "1234",
+      "role": "customer"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<!-- payment.component.html -->
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Payment</h1>
+    <p>Select a payment option:</p>
+    <div class="flex space-x-4">
+      <button
+        (click)="onPaymentSuccess()"
+        class="bg-green-500 text-white px-4 py-2 rounded"
+      >
+        Payment Success
+      </button>
+      <button
+        (click)="onPaymentFailed()"
+        class="bg-red-500 text-white px-4 py-2 rounded"
+      >
+        Payment Failed
+      </button>
+    </div>
+  </div>
+  

@@ -1,0 +1,157 @@
+<div class="text-left w-full">
+  <h3 class="text-lg font-semibold ml-3 text-slate-800">Home and Deco List</h3>
+  <p class="text-slate-500 mb-5 ml-3">
+    Example of product list and total calculation for Home & Deco items.
+  </p>
+</div>
+
+<div
+  class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border"
+>
+  <table id="productTable" class="w-full text-left table-auto min-w-max">
+    <thead>
+      <tr>
+        <th class="p-4 border-b border-slate-300 bg-slate-50">
+          <p class="block text-sm font-normal leading-none text-slate-500">
+            Product Name
+          </p>
+        </th>
+        <th class="p-4 border-b border-slate-300 bg-slate-50">
+          <p class="block text-sm font-normal leading-none text-slate-500">
+            Category
+          </p>
+        </th>
+        <th class="p-4 border-b border-slate-300 bg-slate-50">
+          <p class="block text-sm font-normal leading-none text-slate-500">
+            Qty
+          </p>
+        </th>
+        <th class="p-4 border-b border-slate-300 bg-slate-50">
+          <p class="block text-sm font-normal leading-none text-slate-500">
+            Price
+          </p>
+        </th>
+        <th class="p-4 border-b border-slate-300 bg-slate-50">
+          <p class="block text-sm font-normal leading-none text-slate-500">
+            Total
+          </p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- @for (order of ordersdata; track order.id) { -->
+      <tr *ngFor="let order of ordersdata" class="hover:bg-slate-50">
+        <td class="p-4 border-b border-slate-200">
+          <p class="block text-sm text-slate-800">{{order.items.name}}</p>
+        </td>
+        <td class="p-4 border-b border-slate-200">
+          <p class="block text-sm text-slate-800">{{order.items.description}}</p>
+        </td>
+        <td class="p-4 border-b border-slate-200">
+          <p class="block text-sm text-slate-800">{{order.items.count}}</p>
+        </td>
+        <td class="p-4 border-b border-slate-200">
+          <p class="block text-sm text-slate-800">$85.00</p>
+        </td>
+        <td class="p-4 border-b border-slate-200">
+          <p class="block text-sm text-slate-800">$170.00</p>
+        </td>
+      </tr>
+      <!-- } -->
+      <!-- <tr class="hover:bg-slate-50">
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    Table Lamp
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    Lighting
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    1
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    $45.00
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    $45.00
+                </p>
+                </td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    Wall Art
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    Decor
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    3
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    $30.00
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    $90.00
+                </p>
+                </td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    Sofa
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    Furniture
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    1
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    $300.00
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    $300.00
+                </p>
+                </td>
+            </tr> -->
+    </tbody>
+    <tfoot>
+      <!-- <tr>
+                <td colspan="2" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
+                Total:
+                </td>
+                <td colspan="2" class="p-4 font-bold text-slate-800 border-t border-slate-300">
+                7
+                </td>
+                <td colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                $605.00
+                </td>
+            </tr> -->
+    </tfoot>
+  </table>
+</div>

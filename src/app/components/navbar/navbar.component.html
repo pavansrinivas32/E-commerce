@@ -1,0 +1,84 @@
+<nav class="bg-gray-800 text-white p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <a href="/" class="text-xl font-bold">E-Commerce</a>
+
+    <ul class="flex space-x-4">
+      <li *ngIf="!isLoggedIn()">
+        <a [routerLink]="'/'" class="hover:text-gray-300">Home</a>
+      </li>
+      <li *ngIf="!isLoggedIn() ">
+        <a [routerLink]="'product-list'" class="hover:text-gray-300"
+          >Products List</a
+        >
+      </li>
+      <li *ngIf="!isLoggedIn()">
+        <a [routerLink]="'about-us'" class="hover:text-gray-300">About Us</a>
+      </li>
+      <li *ngIf="!isLoggedIn()">
+        <a [routerLink]="'contact-us'" class="hover:text-gray-300"
+          >Contact Us</a
+        >
+      </li>
+      <li *ngIf="!isLoggedIn()">
+        <a [routerLink]="'login'" class="hover:text-gray-300">Login</a>
+      </li>
+      <li *ngIf="!isLoggedIn()">
+        <a [routerLink]="'signup'" class="hover:text-gray-300">Signup</a>
+      </li>
+
+      <!-- Customer Links -->
+      <li *ngIf="isLoggedIn() && isCustomer()">
+        <a [routerLink]="'orders'" class="hover:text-gray-300">Order History</a>
+      </li>
+      <li *ngIf="isLoggedIn() && isCustomer()">
+        <a [routerLink]="'cart'" class="hover:text-gray-300">Cart</a>
+      </li>
+      <li *ngIf="isLoggedIn() && isCustomer()">
+        <a [routerLink]="'product-list'" class="hover:text-gray-300"
+          >Products List</a
+        >
+      </li>
+      @if (isLoggedIn() && isCustomer()) {
+      <li>
+        <!-- <li *ngIf="isLoggedIn() && isCustomer()"> -->
+        <a [routerLink]="'account'" class="hover:text-gray-300"
+          >Account Settings</a
+        >
+      </li>
+      }
+
+      <!-- Admin Links -->
+      <li *ngIf="isLoggedIn() && isAdmin()">
+        <a [routerLink]="'admin'" class="hover:text-gray-300">Dashboard</a>
+      </li>
+      <li *ngIf="isLoggedIn() && isAdmin()">
+        <a [routerLink]="'orders'" class="hover:text-gray-300"
+          >List of Orders</a
+        >
+      </li>
+      <!-- <li *ngIf="isLoggedIn() && isAdmin()">
+        <a [routerLink]="'current-dispatch'" class="hover:text-gray-300"
+          >Current Dispatch</a
+        >
+      </li>
+      <li *ngIf="isLoggedIn() && isAdmin()">
+        <a [routerLink]="'dispatch'" class="hover:text-gray-300"
+          >Dispatched</a
+        >
+      </li>
+      <li *ngIf="isLoggedIn() && isAdmin()">
+        <a [routerLink]="'ready-to-dispatch'" class="hover:text-gray-300"
+          >Ready to Dispatch</a
+        >
+      </li> -->
+      <li *ngIf="isLoggedIn() && isAdmin()">
+        <a [routerLink]="'item-list'" class="hover:text-gray-300">Item List</a>
+      </li>
+
+      <!-- Logout Link -->
+      <li *ngIf="isLoggedIn()">
+        <a href="#" (click)="logout()" class="hover:text-gray-300">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
